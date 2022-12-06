@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tema1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center">
+
+            <Image
+                Source="money.png"
+                SemanticProperties.Description="Money!"
+                HeightRequest="250"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Enter amount to convert"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="25"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="Result"
+                Text="Euro to Lei"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="The result of the converted number"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry 
+                x:Name="amountEntry" 
+                Keyboard="Numeric" 
+                Margin="90,0,90,0" 
+                HorizontalTextAlignment="Start"
+                Placeholder="Amount in Euro"
+                ClearButtonVisibility="WhileEditing"/>
+
+            <Button
+                x:Name="ConverterBtn"
+                Text="Convert!"
+                SemanticProperties.Hint="Convert the number from Euro to Lei"
+                Clicked="OnConverterClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="GoToNewPage1"
+                Text="Go to Guess The Number"
+                SemanticProperties.Hint="Go to Guess the Number Page"
+                HorizontalOptions="Center"
+                Clicked="OnNextPageClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
